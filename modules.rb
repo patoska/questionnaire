@@ -48,7 +48,7 @@ module QuestionnaireResponder
           response = ""
           loop do
             response = ask_question(question)
-            break if question.valid_response(response)
+            break if !response.nil? && question.valid_response(response)
             puts "Invalid response"
           end
           responses[questionnaire.id][question.id] = response

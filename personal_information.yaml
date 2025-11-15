@@ -16,13 +16,6 @@ questions:
     visible:
       have_alias:
         operator: and
-  dogs_name:
-    type: text
-    label: What is your dog's name?
-    min_length: 3
-  favorite_word:
-    type: text
-    label: What is your favorite word?
   gender:
     type: radio
     label: What is your gender?
