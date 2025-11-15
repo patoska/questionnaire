@@ -1,0 +1,37 @@
+
+id: about_the_situation
+title: About the situation
+questions:
+  situation:
+    type: radio
+    label: Which situation best applies to you?
+    options:
+      dv: Domestic Violence
+      sa: Sexual Assault
+  live_in_us:
+    type: boolean
+    label: Do you live in the US?
+  state:
+    type: dropdown
+    label: What state do you live in?
+    visible:
+      live_in_us:
+        operator: and
+      situation:
+        operator: and
+        value: dv
+    options:
+      ca: California
+      fl: Florida
+      ny: New York
+      tx: Texas
+      wa: Washington
+  country:
+    type: dropdown
+    label: Country
+    visible:
+      live_in_us:
+        operator: not
+    options:
+      ca: Canada
+      mx: Mexico
